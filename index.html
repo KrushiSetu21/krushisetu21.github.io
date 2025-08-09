@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Krushi Setu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="title">Krushi Setu</h1>
+    <select id="languageSelector">
+      <option value="en">English</option>
+      <option value="hi">हिंदी</option>
+      <option value="mr">मराठी</option>
+    </select>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2 id="welcome">Welcome, Farmers!</h2>
+      <p id="intro">Find, apply, and track your government schemes in one place.</p>
+    </section>
+
+    <section class="form-section">
+      <h3 id="form_heading">Apply for Schemes</h3>
+      <form id="schemeForm">
+        <label for="name" id="labelName">Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="phone" id="labelPhone">Phone Number:</label>
+        <input type="tel" id="phone" required />
+
+        <div id="recaptcha-container"></div>
+        <button type="button" id="send-otp">Send OTP</button>
+        <input type="text" id="otp" placeholder="Enter OTP" />
+        <button type="button" id="verify-otp">Verify OTP</button>
+
+        <label for="state" id="labelState">Select State:</label>
+        <select id="state" size="5"></select>
+
+        <label for="scheme" id="labelScheme">Select Scheme:</label>
+        <select id="scheme" size="5"></select>
+
+        <button type="submit" id="submitBtn">Submit</button>
+      </form>
+    </section>
+
+    <section class="features">
+      <div class="card">
+        <h3 id="schemes_title">📑 All Schemes</h3>
+        <p id="schemes_desc">Explore central and state government schemes.</p>
+      </div>
+      <div class="card">
+        <h3 id="alerts_title">📅 Deadline Alerts</h3>
+        <p id="alerts_desc">Get reminders before deadlines.</p>
+      </div>
+      <div class="card">
+        <h3 id="prices_title">🛒 Mandi Prices <em>(Coming Soon)</em></h3>
+        <p id="prices_desc">Live market price updates.</p>
+      </div>
+      <div class="card">
+        <h3 id="language_title">🗣️ Multilingual Support</h3>
+        <p id="language_desc">Available in English, Marathi, Hindi.</p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="firebase.js"></script>
+  <script src="lang.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
